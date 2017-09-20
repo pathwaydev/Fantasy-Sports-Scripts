@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Codeacademy Practice/.idea/Codeacademy Practice.iml" filepath="$PROJECT_DIR$/../Codeacademy Practice/.idea/Codeacademy Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../DataVizPractice/.idea/DataVizPractice.iml" filepath="$PROJECT_DIR$/../../DataVizPractice/.idea/DataVizPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/codecademy_markov_proj.iml" filepath="$PROJECT_DIR$/.idea/codecademy_markov_proj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../ffl_scripts/.idea/ffl_scripts.iml" filepath="$PROJECT_DIR$/../../ffl_scripts/.idea/ffl_scripts.iml" />
+    </modules>
+  </component>
+</project>
