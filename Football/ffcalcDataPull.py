@@ -10,21 +10,6 @@ from lxml import etree as et
 import pandas as pd
 from paramFfcalc import ffParamDict as params
 
-adpDict = {
-    'playerId': [],
-    'rdAdp': [],
-    'ovrlAdp': [],
-    'name': [],
-    'pos': [],
-    'team': [],
-    'draftCnt': [],
-    'byeWk': [],
-    'frmt': [],
-    'tmCnt': [],
-    'rdCnt': [],
-    'year': None
-}
-
 urls = params['urls']
 #test urls
 '''urls = [
@@ -40,6 +25,22 @@ def ffCalcPull(urls):
     Retusn: CSV file of data pulled from ffcalc XML of selected url in 'data' directory.
     '''
     for url in urls:
+        
+        adpDict = {
+            'playerId': [],
+            'rdAdp': [],
+            'ovrlAdp': [],
+            'name': [],
+            'pos': [],
+            'team': [],
+            'draftCnt': [],
+            'byeWk': [],
+            'frmt': [],
+            'tmCnt': [],
+            'rdCnt': [],
+            'year': None
+        }
+
         r = requests.get(url)
         root = et.fromstring(r.content)
         adpInfo = root[0]
