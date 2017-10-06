@@ -17,7 +17,7 @@ for pp in q.sort('passing_yds').limit(10).as_aggregate():
     #print pp.player, pp.passing_yds, pp.passing_tds, pp.passing_int
 
 df = pd.DataFrame(dict)
-print(df)
+print df
 
 df.plot(kind='barh', x='name')
 plt.show()

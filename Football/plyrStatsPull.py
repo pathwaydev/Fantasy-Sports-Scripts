@@ -1,13 +1,13 @@
 import nfldb
 import pandas as pd
 
-def plyrStatsPull(minAdpPlayer, team, pos, year):
+def plyrStatsPull(adpPlyrId, minAdpPlayer, pos, year):
     attrib = {}
     score = {}
 
     db = nfldb.connect()
 
-    player, _ = nfldb.player_search(db, minAdpPlayer, team=team, position=pos)
+    player, _ = nfldb.player_search(db, minAdpPlayer, position=pos)
 
     q = nfldb.Query(db)
     q.player(player_id=player.player_id)
@@ -29,9 +29,9 @@ def plyrStatsPull(minAdpPlayer, team, pos, year):
         score['fumRecTd'] = pp.fumbles_rec_tds
         score['fumLost'] = pp.fumbles_lost
         attrib['pos'] = pos
-        attrib['team'] = team
+        attrib['team'] = player.team
         attrib['playerName'] = minAdpPlayer
-        plyrIdx = minAdpPlayer, pos, team
+        plyrIdx = adpPlyrId
         
     df1 = pd.DataFrame(score, index=[plyrIdx])
     df1 = df1[[
