@@ -43,3 +43,4 @@ for fmt in ffParamDict['frmt']:
             urls.append(x)
 
 ffParamDict['urls'] = urls
+print(ffParamDict['urls'])
